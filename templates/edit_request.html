@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container">
+    <h1>Edit Request</h1>
+    <form id="edit-request-form" data-id="{{ request.id }}">
+        <label for="status">Status:</label>
+        <select name="status" id="status" required>
+            <option value="open" {% if request.status == "open" %}selected{% endif %}>Open</option>
+            <option value="on process" {% if request.status == "on process" %}selected{% endif %}>On Process</option>
+            <option value="closed" {% if request.status == "closed" %}selected{% endif %}>Closed</option>
+        </select>
+
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes">{{ request.notes }}</textarea>
+        <button type="submit">Update</button>
+    </form>
+</div>
+{% endblock %}

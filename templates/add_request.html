@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container">
+    <h1>Add Request</h1>
+    <form id="add-request-form">
+        <label for="type">Request Type</label>
+        <select name="type" required>
+            <option value="new">New</option>
+            <option value="complain">Complain</option>
+        </select>
+
+        <label for="employee">Assign to Employee</label>
+        <select id="employee-dropdown" name="employee" required></select>
+
+        <label for="description">Description</label>
+        <textarea name="description" required></textarea>
+
+        <button type="submit">Add Request</button>
+    </form>
+</div>
+{% endblock %}

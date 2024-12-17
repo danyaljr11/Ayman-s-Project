@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard-container">
+    <h1>Welcome, {{ user.full_name }}</h1>
+    <h2>Your Requests</h2>
+    <ul id="employee-requests" class="list-group"></ul>
+    <div id="requests-container"></div>
+    <p id="no-requests-message" style="display: none;">No requests found.</p>
+</div>
+{% endblock %}

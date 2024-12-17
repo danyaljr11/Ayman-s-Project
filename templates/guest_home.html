@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard-container">
+    <h1>Welcome, {{ user.full_name }}</h1>
+    <button id="add-request-button" onclick="window.location.href='/requests/add/'">Add New Request</button>
+    <h2>Your Requests</h2>
+    <ul id="guest-requests" class="list-group"></ul>
+    <p id="no-requests-message" style="display:none;">No requests available.</p>
+</div>
+{% endblock %}
